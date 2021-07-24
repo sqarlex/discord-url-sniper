@@ -1,0 +1,9 @@
+{
+"vanity":"", // url
+"voicekanal": "", // sesli kanal id 
+"durum": "Developed By SqarLex",
+"sunucu": "", // sunucu id 
+"botOwner": "", // bot sahibi id 
+"urllog": "", // url log kanal id
+"token":"" // tokem 
+}
