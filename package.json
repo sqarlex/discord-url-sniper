@@ -1,0 +1,19 @@
+{
+  "name": "sqarlex",
+  "version": "3.6.1-0.4",
+  "description": "",
+  "main": "sqarlex.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sLex#0247",
+  "license": "MIT",
+  "keywords": [
+    "discord.js"
+  ]
+}
