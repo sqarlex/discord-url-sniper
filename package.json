@@ -7,11 +7,14 @@
     "discord.js": "^12.5.3",
     "request": "^2.88.2"
   },
+    "engines": {
+    "node": "14.x"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "sLex#0247",
+  "author": "sqarlex#0247",
   "license": "MIT",
   "keywords": [
     "discord.js"
