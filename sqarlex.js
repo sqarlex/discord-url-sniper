@@ -3,44 +3,46 @@ const client = new Discord.Client()
 const request = require('request')
 const config = require("./config.json")
 
-// SqarLex
+//Developed by sqarlex
+
     client.on("ready", () => {
-        client.user.setPresence({ activity: { name: config.durum }, status: "idle" });
-        client.channels.cache.get(config.voicekanal).join().catch(x => x)
+        client.user.setPresence({ activity: { name: config.durum }, status: "dnd" });
          const guild = client.guilds.cache.get(config.sunucu)
            console.log(`${guild.name} sunucusu için "${config.vanity}" urlsi spamlanmaya başladı.`)
 
-
+//Developed by sqarlex
+        
     setInterval(async () => {
-        if(guild.vanityURLCode == config.vanity) {// SqarLex
+        if(guild.vanityURLCode == config.vanity) {
             let onay = new Discord.MessageEmbed().setAuthor(guild.name, guild.iconURL({dynamic: true})).setColor('RANDOM').setTimestamp().setDescription(`"**${guild.name}**" sunucusunun özel url'si belirtildiği gibi **\`${config.vanity}\`** olarak değiştirildi :white_check_mark:`)
-                let kanal = await guild.channels.cache.get(config.urllog)// SqarLex
-                     await kanal.send(onay)
-                        await kanal.send(`<@${config.botOwner}>`)// SqarLex
+                let kanal = await guild.channels.cache.get(config.urllog)
+                     await kanal.send(`"**${guild.name}**" sunucusunun özel url'si belirtildiği gibi **\`${config.vanity}\`** olarak değiştirildi :white_check_mark:`)
 
+//Developed by sqarlex
 
     console.log(`${guild.name} = "${guild.vanityURLCode}" Durum: ✔`) 
-        console.log(`Bottan Çıkış Yapıldı.`)// SqarLex
+        console.log(`Bottan Çıkış Yapıldı.`)
             process.exit()
-                } else {// SqarLex
-                    SqarLex(config.vanity, config.guild, process.token)
-                         }}, 1*500)})// SqarLex
+                } else {
+                    sqarlex(config.vanity, config.guild, config.token)
+                         }}, 1*500)})
 
-    async function SqarLex(vanity, token) {
-        const spammer = {// SqarLex
+    async function sqarlex(vanity, token) {
+        const spammer = {
             url: `https://discord.com/api/v8/guilds/${config.sunucu}/vanity-url`,
                 body: {
                     code: `${vanity}`},
     json: true,
         method: 'PATCH',
-            headers: {// SqarLex
-                "Authorization": `Bot ${process.token}`
+            headers: {
+                "Authorization": `Bot ${config.token}`
                     }
                         };
 
     request(spammer, (err, res, body) => {
-        if (err) {// SqarLex
+        if (err) {
             return console.log(err)}})}
 
+//Developed by sqarlex
 
-client.login(process.token).catch(err => { console.log("Token Hatalı !")})
+client.login(config.token)
