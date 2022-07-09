@@ -1,1 +1,1 @@
-9.07.2022]
+[09.07.2022] - Kontrol edildi. Herhangi bir problem bulunmadı.
