@@ -1,9 +1,7 @@
 {
-"vanity":"", // url
-"voicekanal": "", // sesli kanal id 
-"durum": "Developed By SqarLex",
-"sunucu": "", // sunucu id 
-"botOwner": "", // bot sahibi id 
-"urllog": "", // url log kanal id
-"token":"" // tokem 
+"vanity": "", //Alınacak url
+"durum": "alisqarlex", //Bot durum
+"sunucu": "", //Sunucu id
+"urllog": "", //Url alınınca mesaj atılacak kanal
+"token": "" // bot toekn
 }
